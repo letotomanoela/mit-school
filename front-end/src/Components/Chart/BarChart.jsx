@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Chart from "react-apexcharts";
 
 const BarChart = ({ chartData, chartOptions,h }) => {
   const [data, setData] = useState([]);
@@ -11,13 +10,7 @@ const BarChart = ({ chartData, chartOptions,h }) => {
   }, [chartData, chartOptions]);
 
   return (
-    <Chart
-      options={options}
-      series={data}
-      type="bar"
-      width="100%"
-      height={h ? "93%":"88%"}
-    />
+    <div>hello chart<div/>
   );
 };
 
