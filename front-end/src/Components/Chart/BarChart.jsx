@@ -10,7 +10,7 @@ const BarChart = ({ chartData, chartOptions,h }) => {
   }, [chartData, chartOptions]);
 
   return (
-    <div>hello chart<div/>
+    <>hello chart</>
   );
 };
 
