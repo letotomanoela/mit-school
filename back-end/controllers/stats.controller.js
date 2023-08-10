@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-import asyncHandler from "../middleware/async";
+import asyncHandler from "../middleware/async.js";
 
 export const totalNumber = asyncHandler(async (req, res, next) => {
   const etudiant = await prisma.etudiant.count();
