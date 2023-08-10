@@ -1,8 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
-import asyncHandler from "../middleware/async";
+import asyncHandler from "../middleware/async.js";
 import bcrypt from "bcryptjs";
-import generateToken from "../utils/generateToken";
+import generateToken from "../utils/generateToken.js";
 import jwt from "jsonwebtoken";
 
 export const createUser = asyncHandler(async (req, res, next) => {
