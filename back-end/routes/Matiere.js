@@ -5,7 +5,7 @@ import {
     updateMatiereByClassByParcours,
     deleteMatiere
 
-} from "../controllers/matiere.controller";
+} from "../controllers/matiere.controller.js";
 
 const router = Router();
 
