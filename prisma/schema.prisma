@@ -1,0 +1,74 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+
+
+
+model Etudiant {
+  id             String @id @default(auto()) @map("_id") @db.ObjectId
+  numInscription String @unique
+  nomEtudiant    String
+  dateNaissance  DateTime
+  numTel         String @unique
+  cin            String @unique
+  adresse        String
+  asc            String
+  email          String @unique
+  image          String @unique
+  classe         Classe @relation(fields: [classeId], references: [id])
+  classeId       String @db.ObjectId
+  notes          Note[]
+  user           User   @relation(fields: [userId], references: [id])
+  userId         String @unique @db.ObjectId 
+}
+
+
+model Classe {
+   id         String @id @default(auto()) @map("_id") @db.ObjectId
+   nomClasse  String  
+   etudiants  Etudiant[]
+   matieres   Matiere[]
+ }
+
+model Note {
+   id         String @id @default(auto()) @map("_id") @db.ObjectId
+   semestre String
+   noteValue Float?    
+   rattrapage Boolean @default(false)
+   etudiant   Etudiant @relation(fields: [etudiantId], references: [id])
+   etudiantId String @db.ObjectId
+   matiere    Matiere @relation(fields: [matiereId], references: [id])
+   matiereId String @db.ObjectId
+ }
+
+model Matiere {
+   id         String @id @default(auto()) @map("_id") @db.ObjectId
+   nomMatiere String
+   acronyme   String
+   coef       Float
+   notes      Note[]
+   classe     Classe @relation(fields: [classeId], references: [id])
+   classeId   String @db.ObjectId
+ }
+
+model User {
+   id         String @id @default(auto()) @map("_id") @db.ObjectId
+   pseudo     String? @unique
+   password   String?
+   role       String @default("user")
+   Etudiants  Etudiant?
+}
+
+enum Role {
+  USER
+  ADMIN
+}
