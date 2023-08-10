@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
-import { isEmpty } from "../utils/isEmpty";
-import asyncHandler from "../middleware/async";
+import { isEmpty } from "../utils/isEmpty.js";
+import asyncHandler from "../middleware/async.js";
 
 export const getClasse = asyncHandler(async (req, res, next) => {
   const classe = await prisma.classe.findMany();
