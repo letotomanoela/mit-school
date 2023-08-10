@@ -10,9 +10,9 @@ import {
   totalClasseASC,
   deleteEtudiant,
   totalSearchEtudiant
-} from "../controllers/etudiant.controller";
+} from "../controllers/etudiant.controller.js";
 
-import { protect } from "../middleware/authMiddelware";
+import { protect } from "../middleware/authMiddelware.js";
 
 const router = Router();
 
