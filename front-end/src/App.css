@@ -1,0 +1,222 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");*/
+@font-face {
+  src: url("./assets/Inter.ttf");
+  font-family: "Inter";
+}
+* {
+  font-family: "Inter", sans-serif;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Style général de la zone de défilement */
+
+
+
+.primary {
+  background: #e14eca;
+  background-image: -webkit-linear-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(#e14eca),
+    color-stop(#ba54f5),
+    to(#e14eca)
+  );
+  background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
+  background-size: 210% 210%;
+  background-position: 100% 0;
+  background-color: #e14eca;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+}
+.default {
+  background: #344675;
+  background-image: -webkit-linear-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(#344675),
+    color-stop(#263148),
+    to(#344675)
+  );
+  background-image: linear-gradient(to bottom left, #344675, #263148, #344675);
+  background-size: 210% 210%;
+  background-position: 100% 0;
+  background-color: #344675;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+}
+.info {
+  background: #1d8cf8;
+  background-image: -webkit-linear-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(#1d8cf8),
+    color-stop(#3358f4),
+    to(#1d8cf8)
+  );
+  background-image: linear-gradient(to bottom left, #1d8cf8, #3358f4, #1d8cf8);
+  background-size: 210% 210%;
+  background-position: 100% 0;
+  background-color: #1d8cf8;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+}
+.success {
+  background: #00f2c3;
+  background-image: -webkit-linear-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(#00f2c3),
+    color-stop(#0098f0),
+    to(#00f2c3)
+  );
+  background-image: linear-gradient(to bottom left, #00f2c3, #0098f0, #00f2c3);
+  background-size: 210% 210%;
+  background-position: 100% 0;
+  background-color: #00f2c3;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+}
+.success:hover,
+.danger:hover {
+  background-position: 0 100%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.warning {
+  background: #ff8d72;
+  background-image: -webkit-linear-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(#ff8d72),
+    color-stop(#ff6491),
+    to(#ff8d72)
+  );
+  background-image: linear-gradient(to bottom left, #ff8d72, #ff6491, #ff8d72);
+  background-size: 210% 210%;
+  background-position: 100% 0;
+  background-color: #ff8d72;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+}
+
+.danger {
+  background: #fd5d93;
+  background-image: -webkit-linear-gradient(
+    linear,
+    right top,
+    left bottom,
+    from(#fd5d93),
+    color-stop(#ec250d),
+    to(#fd5d93)
+  );
+  background-image: linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93);
+  background-size: 210% 210%;
+  background-position: 100% 0;
+  background-color: #fd5d93;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+}
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  margin-top: 10px;
+  width: 100%;
+  flex-shink: 0;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #000;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field input{
+  background: transparent;
+}
+
+body.dark .form__field{
+  color: #fff;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  color: #000;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  font-weight: 500;
+}
+body.dark .form__field:focus ~ .form__label {
+
+  color: #fff;
+
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}

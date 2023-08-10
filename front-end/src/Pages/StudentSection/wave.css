@@ -1,0 +1,7 @@
+.wave{
+    display: block;
+    background-image: url("../../../public/wave.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center center;
+}

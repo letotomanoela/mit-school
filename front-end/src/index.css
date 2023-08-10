@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.body-content::-webkit-scrollbar {
+    @apply w-[10px]
+  }
+  
+  .body-content::-webkit-scrollbar-track {
+    
+  }
+  .body-content::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded
+  }
+  .dark .body-content::-webkit-scrollbar-thumb {
+    @apply bg-slate-800
+  }
