@@ -6,7 +6,7 @@ import {
   researchNotes,
   totalSearchNotes
   
-} from "../controllers/note.controller";
+} from "../controllers/note.controller.js";
 import { Router } from "express";
 
 const router = Router();
