@@ -4,9 +4,9 @@ import {
   updateClasse,
   deleteClasse,
   getClassesByParcours,
-} from "../controllers/classe.controller";
+} from "../controllers/classe.controller.js";
 import { Router } from "express";
-import { protect } from "../middleware/authMiddelware";
+import { protect } from "../middleware/authMiddelware.js";
 const router = Router();
 
 router.route("/").get(protect,getClasse).post(createClasse);
